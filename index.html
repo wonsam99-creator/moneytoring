@@ -1,31 +1,63 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="ko">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2685.2">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>머니터링 – 데모 보드</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="ko"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;LifePetyle Demo&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;link rel="stylesheet" href="styles.css" /&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;h1&gt;LifePetyle Demo&lt;/h1&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;이곳에 Figma에서 복사한 HTML/React 코드 넣을 예정!&lt;/p&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="script.js"&gt;&lt;/script&gt;</p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+  <div class="mt-app">
+    <!-- 상단 헤더 -->
+    <header class="mt-header">
+      <div class="mt-logo">머니터링</div>
+      <nav class="mt-nav">
+        <button class="mt-nav-btn mt-nav-btn--active">오늘의 이슈</button>
+        <button class="mt-nav-btn">관심 종목</button>
+        <button class="mt-nav-btn">전략 리포트</button>
+      </nav>
+      <div class="mt-header-right">
+        <input
+          type="search"
+          class="mt-search"
+          placeholder="종목·키워드 검색"
+        />
+        <button class="mt-login">로그인</button>
+      </div>
+    </header>
+
+    <!-- 필터 바 -->
+    <section class="mt-filters">
+      <div class="mt-filter-chip mt-filter-chip--active">전체</div>
+      <div class="mt-filter-chip">국내 주식</div>
+      <div class="mt-filter-chip">해외 주식</div>
+      <div class="mt-filter-chip">채권</div>
+      <div class="mt-filter-chip">암호화폐</div>
+    </section>
+
+    <!-- 메인 컨텐츠 영역 -->
+    <main class="mt-main">
+      <!-- 왼쪽: 리스트 -->
+      <section class="mt-list">
+        <header class="mt-list-header">
+          <span class="mt-list-title">실시간 리서치 피드</span>
+          <span class="mt-list-sub">AI가 중요도 순으로 정렬했어요</span>
+        </header>
+
+        <ul class="mt-article-list" id="article-list">
+          <!-- JS에서 항목을 채워 넣음 -->
+        </ul>
+      </section>
+
+      <!-- 오른쪽: 상세 / 썸네일 영역 -->
+      <aside class="mt-detail" id="detail-panel">
+        <div class="mt-detail-placeholder">
+          왼쪽에서 보고 싶은 리포트를 클릭해 보세요.
+        </div>
+      </aside>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
